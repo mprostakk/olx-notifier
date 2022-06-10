@@ -40,6 +40,7 @@ class Olx:
             promoted = soup_offer.find("div", {"data-testid": "adCard-featured"}) is not None
             price = soup_offer.find("p", {"data-testid": "ad-price"}).text
             link = soup_offer.find("a")["href"]
+            link = f"https://www.olx.pl{link}"
             is_today = (
                 "dzisiaj" in soup_offer.find("p", {"data-testid": "location-date"}).text.lower()
             )
