@@ -55,8 +55,8 @@ class Olx:
         if not offer.is_today:
             return False
 
-        for offer in self.offers:
-            if offer.link == offer.link:
+        for saved_offer in self.offers:
+            if saved_offer.link == offer.link:
                 return False
 
         return True
